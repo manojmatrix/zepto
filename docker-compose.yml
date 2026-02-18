@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  # Backend Service
+  backend-app:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  # Frontend Service
+  frontend-app:
+    build: ./frontend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./frontend/.env
+    stdin_open: true # Required for React scripts to stay running
+    tty: true        # Required for React scripts to stay running
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend-app
