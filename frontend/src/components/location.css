@@ -1,0 +1,108 @@
+/* The main wrapper to ensure it looks like the screenshot */
+.zepto-location-modal .modal-content {
+    border-radius: 12px !important;
+    border: none !important;
+    padding: 24px !important;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Header styling */
+.modal-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-title-text {
+    font-weight: 800;
+    font-size: 18px;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 20px;
+    color: #888;
+}
+
+/* Search bar with the grey background */
+.search-box-modal {
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.search-box-modal input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+/* The card for 'Use My Current Location' */
+.current-location-card {
+    border: 1px solid #ebebeb;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.location-icon-circle {
+    color: #ff527b;
+    display: flex;
+    align-items: center;
+}
+
+.location-info {
+    flex: 1;
+}
+
+.location-title-pink {
+    color: #ff527b;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.location-subtitle {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* The Pink Enable Button */
+.enable-btn {
+    background: transparent;
+    border: 1px solid #ff527b;
+    color: #ff527b;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.enable-btn:hover {
+    background: #ff527b;
+    color: white;
+}
+
+/* Image at the bottom */
+.illustration-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.illustration-container img {
+    width: 240px;
+    height: auto;
+}

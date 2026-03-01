@@ -1,0 +1,127 @@
+.seller-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+/* Sidebar Styling */
+.seller-sidebar {
+    width: 260px;
+    background-color: #3e0090; /* Zepto Purple */
+    color: white;
+    padding: 20px 0;
+}
+
+.sidebar-logo {
+    font-size: 24px;
+    font-weight: 800;
+    padding: 0 25px;
+    margin-bottom: 30px;
+}
+
+.sidebar-logo span {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.seller-sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 15px 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.seller-sidebar .nav-link:hover, .seller-sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Content Area Area */
+.seller-content {
+    flex: 1;
+}
+
+.zepto-btn-main {
+    background-color: #ff3278 !important; /* Zepto Pink */
+    border: none !important;
+    padding: 10px 20px !important;
+    font-weight: bold !important;
+}
+
+/* Inventory Table */
+.inventory-table {
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+}
+
+.inventory-table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #eee;
+    padding: 15px;
+    font-size: 13px;
+    color: #666;
+}
+
+.inventory-table tbody td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.table-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-badge.pending { background-color: #fff4e5; color: #ff9800; }
+.status-badge.approved { background-color: #e6fcf5; color: #0ca678; }
+.status-badge.rejected { background-color: #fff5f5; color: #fa5252; }
+
+/* Custom Status Badges */
+.status-badge-custom {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+/* Sky Blue for Pending */
+.status-badge-custom.pending {
+    background-color: #e0f2fe !important;
+    color: #0369a1 !important;
+    border: 1px solid #bae6fd;
+}
+
+/* Green for Approved */
+.status-badge-custom.approved {
+    background-color: #dcfce7 !important;
+    color: #15803d !important;
+    border: 1px solid #bbf7d0;
+}
+
+/* Red for Rejected */
+.status-badge-custom.rejected {
+    background-color: #fee2e2 !important;
+    color: #b91c1c !important;
+    border: 1px solid #fecaca;
+}
+
+/* Default/Other */
+.status-badge-custom.secondary {
+    background-color: #f3f4f6 !important;
+    color: #4b5563 !important;
+}

@@ -1,0 +1,43 @@
+.category-page-wrapper {
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.sidebar-sticky {
+    position: sticky;
+    top: 100px; /* Adjust based on your Navbar height */
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.sidebar-item {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.2s;
+    border-left: 4px solid transparent !important;
+}
+
+.sidebar-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* The active purple indicator from your image */
+.active-sidebar {
+    background-color: #fcefff !important; /* Very light purple */
+    color: #8b229c !important; /* Zepto Purple */
+    font-weight: 700 !important;
+    border-left: 4px solid #8b229c !important;
+}
+
+.category-banner {
+    border-radius: 12px;
+    width: 48%;
+    object-fit: cover;
+}
+
+.sidebar-text {
+    line-height: 1.2;
+}

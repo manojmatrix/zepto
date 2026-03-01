@@ -1,0 +1,552 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* navbar css */
+.text-primary, .hover-purple:hover {
+  color: #8224e3 !important;
+}
+
+/* Category hover effect */
+.hover-purple {
+  transition: color 0.2s;
+}
+
+/* Hide scrollbar for category list but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* nav var extra */
+/* Remove default link styling */
+.zepto-nav-wrapper a {
+  text-decoration: none !important;
+}
+
+/* Category Links */
+.nav-category-link {
+  color: #333 !important; /* Dark Grey/Black text */
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-category-link:hover, .active-cat {
+  color: #8224e3 !important; /* Zepto Purple */
+  border-bottom: 3px solid #8224e3;
+}
+
+/* Login/Cart Icons */
+.nav-action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #666;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-action-item:hover {
+  color: #8224e3;
+}
+
+/* Cart Badge */
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #ff527b; /* Zepto Pink/Red */
+  color: white;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Sidebar Customization */
+.offcanvas-header {
+  padding: 1rem 1.5rem;
+}
+/* Zepto Profile Modal Custom Styles */
+.zepto-profile-modal .modal-content {
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+}
+
+.user-avatar-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #e9ecef;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item-zepto {
+  padding: 12px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 5px;
+  transition: all 0.2s ease;
+}
+
+.nav-item-zepto:hover {
+  background-color: #f1f3f5;
+}
+
+.nav-item-zepto.active {
+  background-color: #e9ecef;
+  color: #000;
+}
+
+.close-x-profile {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+}
+
+.zepto-cash-card {
+  border: 1px dashed #dee2e6 !important;
+}
+
+.empty-orders-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* cafe page  */
+/* Container for the image to prevent it from growing too tall */
+.cafe-hero-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    /* Aspect ratio ensures height stays small relative to width */
+    aspect-ratio: 1440 / 460; 
+    max-height: 280px; /* Limits the vertical size */
+}
+
+.cafe-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the container without stretching */
+    display: block;
+}
+
+/* Zepto Style Badge Pill */
+.zepto-badge-pill {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    gap: 20px;
+}
+
+.badge-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+}
+
+.badge-divider {
+    width: 1px;
+    height: 25px;
+    background-color: #e0e0e0;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .cafe-hero-wrapper {
+        max-height: 180px;
+    }
+    .zepto-badge-pill {
+        padding: 8px 15px;
+        gap: 10px;
+        font-size: 12px;
+    }
+}
+
+/* home css */
+.home-page-layout {
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+/* Force the content area to stay centered and limited in width */
+.main-content-area {
+    max-width: 1200px !important; /* Adjust this to make it more or less 'congested' */
+    margin: 0 auto;
+}
+
+/* Banner sizing to prevent it from being too tall */
+.home-banner-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Matching the circle scroller in your image */
+home-subcategories-scroller {
+    display: flex;
+    /* This ensures the items stay in the center of the page */
+    justify-content: center; 
+    width: 100%;
+    padding: 20px 0;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.home-subcategories-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+/* Congestion & Centering Hack:
+   By wrapping the items or ensuring the scroller behaves correctly, 
+   we use a 'gap' that keeps them tight (congested).
+*/
+.home-subcategories-scroller > div {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Reduced gap from 25px to 15px for 'congestion' */
+    min-width: max-content; /* Prevents shrinking and allows centering */
+    padding: 0 15px;
+}
+
+.home-subcategories-scroller::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.home-sub-item {
+    flex: 0 0 auto;
+    width: 100px;
+    text-align: center;
+}
+
+.home-sub-image-box {
+    width: 85px;
+    height: 85px;
+    background-color: #fff5ed; /* Soft peach background from your screenshot */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin: 0 auto 8px;
+}
+
+.home-sub-image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.home-sub-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #4a4a4a;
+    line-height: 1.2;
+}
+
+.fresh-page-wrapper {
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.sub-cat-nav-container {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.sub-cat-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 25px;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+    padding: 10px 0;
+}
+
+.sub-cat-scroll::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+.sub-cat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    min-width: 80px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.sub-cat-img-box {
+    width: 65px;
+    height: 65px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.sub-cat-img-box img {
+    width: 90%; /* Zoomed in look */
+    height: 90%;
+    object-fit: contain;
+}
+
+.sub-cat-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Active State Styles */
+.sub-cat-item.active .sub-cat-text {
+    color: #ff00b8; /* Zepto Pink/Purple color */
+}
+
+.sub-cat-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    width: 100%;
+    height: 3px;
+    background-color: #ff00b8;
+    border-radius: 10px 10px 0 0;
+}
+
+.sub-cat-item.active .sub-cat-img-box {
+    background-color: #fff0f9;
+    border: 1px solid #ffdbf0;
+}
+
+.electronics-page {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.electronics-hero-banner {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 24px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #333;
+    letter-spacing: -2px;
+}
+
+.hero-content p {
+    letter-spacing: 15px;
+    margin-top: -10px;
+    font-weight: 400;
+}
+
+/* Decorative Cubes from screenshot */
+.bg-decor {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background: #333;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.top-left { top: 20%; left: 15%; opacity: 0.8; }
+.bottom-right { bottom: 20%; right: 15%; opacity: 0.8; transform: scale(1.5); }
+
+.fw-black { font-weight: 900; }
+.tracking-widest { letter-spacing: 0.5em; }
+.mobiles-page {
+    background-color: #ffffff;
+}
+
+.mobile-header-black {
+    background-color: #000000;
+    border-radius: 40px; /* Highly rounded corners like screenshot */
+    padding: 30px 40px;
+}
+
+.mobile-nav-pills {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.mobile-pill {
+    background-color: #2a2a2a; /* Dark grey pills */
+    border-radius: 20px;
+    padding: 15px;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.mobile-pill.active {
+    background-color: #3d3d3d;
+    border-color: #ffffff;
+}
+
+.pill-img-wrap {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.pill-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mobile-pill span {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.section-heading-wrap h2 {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+}
+
+.beauty-page { background-color: #fff; }
+
+/* Promotional Cards */
+.promo-card {
+    border-radius: 15px;
+    padding: 20px;
+    height: 200px;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.purple-gradient { background: linear-gradient(to bottom, #7b2cbf, #3c096c); }
+.red-gradient { background: linear-gradient(to bottom, #e63946, #a8dadc); }
+.yellow-bg { background-color: #ffb703; color: #000; }
+
+.promo-card h4 { font-weight: 800; font-size: 1.2rem; margin-bottom: 5px; }
+.shop-now { width: fit-content; border-radius: 5px; font-weight: bold; font-size: 0.7rem; }
+
+/* Sub-category Navigation */
+.beauty-nav {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.beauty-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.beauty-nav-item.active {
+    opacity: 1;
+    border-bottom: 3px solid #ff00b8;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background: #fdf0f6;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.beauty-nav-item span { font-size: 12px; font-weight: 600; text-align: center; }
+
+.see-all-btn { border: 2px solid #ff00b8; color: #ff00b8; font-weight: bold; }
+

@@ -1,0 +1,111 @@
+/* Zepto Theme Styles */
+.seller-body {
+    background-color: #f8f9fb;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.registration-card {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.zepto-logo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #5d3891; /* Zepto Purple */
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.zepto-logo span {
+    color: #ff3f6c; /* Zepto Pink accent */
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    margin-left: 4px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background-color: #f3f4f6;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: #5d3891;
+    background-color: white;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #5d3891;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #4a2d74;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.footer-text a {
+    color: #5d3891;
+    text-decoration: none;
+    font-weight: 700;
+}

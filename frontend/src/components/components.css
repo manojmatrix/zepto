@@ -1,0 +1,1044 @@
+.category-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hide for Firefox
+    padding: 10px 0;
+}
+
+/* .category-scroll-container::-webkit-scrollbar {
+    display: none; /* Hide for Chrome/Safari */
+} */
+
+.category-card {
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.img-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-name {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Arrows */
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.scroll-arrow:hover {
+    background: #f8f8f8;
+}
+
+.scroll-arrow.prev { left: -20px; }
+.scroll-arrow.next { right: -20px; }
+
+.cursor-pointer { cursor: pointer; }
+
+/* banner carousel */
+.promo-swiper {
+  padding-bottom: 40px !important; /* Space for dots */
+}
+
+.banner-card {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.banner-card:hover {
+  transform: scale(1.01);
+}
+
+.banner-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Customizing Swiper Pagination Dots to match Zepto Purple */
+.swiper-pagination-bullet-active {
+  background: #ff3278 !important; /* Zepto pink/purple */
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+ 
+/* extra circle category */
+.category-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.category-card {
+  min-width: 200px; /* adjust size */
+  margin-right: 16px;
+}
+
+.scroll-arrow-next,
+.scroll-arrow-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.scroll-arrow-next {
+  right: 10px;
+}
+
+.scroll-arrow-prev {
+  left: 10px;
+}
+
+.product-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: visible; /* Allows button to "pop" out */
+    max-width: 180px;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.img-container {
+    position: relative;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 12px 12px 0 0;
+}
+
+.product-image {
+    object-fit: contain;
+    height: 120px;
+}
+
+/* Discount Badge Styling */
+.discount-badge {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background: #256fef; /* Zepto blue discount color */
+    color: white;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 0 0 4px 4px;
+    z-index: 2;
+}
+
+/* Floating ADD Button */
+.add-btn-wrapper {
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+    z-index: 3;
+}
+
+.add-btn {
+    background-color: white !important;
+    color: #ff3278 !important; /* Zepto Pink */
+    border: 1px solid #ff3278 !important;
+    padding: 4px 18px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+}
+
+.add-btn:hover {
+    background-color: #ff3278 !important;
+    color: white !important;
+}
+
+/* Typography */
+.time-estimate {
+    font-size: 10px;
+    color: #6c757d;
+    font-weight: 700;
+}
+
+.product-title {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    height: 2.4em; /* Limits title to 2 lines */
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+
+.product-weight {
+    font-size: 12px;
+}
+
+.new-price {
+    font-size: 1rem;
+    color: #000;
+}
+ /* product row css  */
+.product-row-wrapper {
+  overflow: visible;
+}
+
+.row-title {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+}
+
+.see-all-text {
+  color: #ff3278; /* Zepto Pink */
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.product-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px; /* Space between cards */
+  scroll-behavior: smooth;
+  padding: 15px 5px; /* Padding for card shadows */
+  scrollbar-width: none; /* Firefox */
+}
+
+.product-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.product-item-wrapper {
+  flex: 0 0 auto; /* Prevents cards from shrinking */
+  width: 180px; /* Same as ProductCard max-width */
+}
+
+/* Row Arrows */
+.row-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.row-arrow:hover {
+  background: #f8f8f8;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.row-arrow.left { left: -18px; }
+.row-arrow.right { right: -18px; }
+
+/* Hide arrows on mobile touch devices */
+@media (max-width: 768px) {
+  .row-arrow { display: none; }
+}
+
+/* zeptonavbar correction */
+.nav-category-link {
+  text-decoration: none;
+  color: #666;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent; /* Hidden by default */
+  transition: all 0.3s ease;
+}
+
+.active-cat {
+  color: #8224e3 !important; /* Zepto Purple */
+  border-bottom: 2px solid #8224e3 !important; /* The visible bar */
+  font-weight: bold;
+}
+
+.footer-category-list p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.footer-category-list p:hover {
+  color: #8224e3; /* Zepto Purple */
+}
+
+.footer-nav-item {
+  font-size: 14px;
+  color: #1a1a1a;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.footer-nav-item:hover {
+  color: #8224e3;
+  text-decoration: underline;
+}
+
+/* Custom button styling for App stores */
+.btn-outline-dark {
+  border-color: #ddd !important;
+  color: #333 !important;
+  font-weight: 600;
+}
+
+.btn-outline-dark:hover {
+  background-color: #f8f8f8 !important;
+  border-color: #333 !important;
+}
+
+/* productCard productsection details  */
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.product-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: #8224e3 !important; /* Purple border on hover */
+}
+
+.product-card .btn-outline-danger {
+  border-color: #ff503e;
+  color: #ff503e;
+}
+
+.product-card .btn-outline-danger:hover {
+  background-color: #ff503e !important;
+  color: white;
+}
+/* Matching Zepto's specific pinkish-red button */
+.btn-danger {
+  background-color: #ff1e5e !important;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+
+.btn-danger:hover {
+  background-color: #e01650 !important;
+  transform: scale(1.02);
+}
+
+/* The Green Price Box */
+.bg-success {
+    background-color: #1c893e !important;
+}
+
+/* Typography and spacing */
+.line-height-base {
+    line-height: 1.6;
+}
+
+/* Thumbnail styling */
+.img-fluid {
+    transition: transform 0.3s ease;
+}
+
+/* Breadcrumb styling */
+nav.small {
+    font-size: 12px;
+}
+/* category circle  */
+/* Container Wrapper */
+.zepto-carousel-wrapper {
+    position: relative;
+    max-width: 1350px; 
+    margin: 0 auto !important;
+}
+
+.category-scroll-container {
+    display: block;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.category-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.category-inner-flex {
+    display: flex;
+    justify-content: center; 
+    gap: 12px; /* Increased gap for better text breathing room */
+    min-width: max-content;
+    padding:10px 0;
+}
+
+.category-item-wrapper {
+    flex: 0 0 auto; 
+    width: 85px;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.zepto-img-box {
+    width: 90px !important; 
+    height: 90px !important;
+    background-color: #f3f4f6 !important;
+    border-radius: 18px !important; /* Rounded square look */
+    overflow: hidden !important;   /* This is vital for the zoom to work */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 8px !important;
+}
+
+.zepto-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.15); 
+    transition: transform 0.3s ease;
+}
+
+/* FIX: Bigger, bolder text to match Zepto screenshots */
+.zepto-cat-name-v2 {
+    font-size: 11px; /* Bigger font */
+    font-weight: 600;   /* Bold weight */
+    color: #1a1a1a;    /* Darker black */
+    text-align: center;
+    line-height: 1.1;  /* Tighter lines */
+    margin: 0;
+    min-height: 24px;  /* Ensures alignment regardless of line count */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* Font family - standard sans-serif is closest to Zepto's custom font */
+    font-family: 'Inter', sans-serif; 
+}
+
+/* Navigation Arrows */
+.scroll-arrow-btn {
+    position: absolute;
+    top: 40%;
+    width: 36px;
+    height: 36px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.scroll-arrow-btn.prev { left: -10px; }
+.scroll-arrow-btn.next { right: -10px; }
+.zepto-navbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures it stays above images and sidebar */
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Optional: adds a nice shadow when scrolling */
+}
+
+/* Container for the image */
+
+
+/* The Image itself */
+.zepto-img-box img {
+    width: 100%;
+    height: 140%; /* Increase height to be larger than the box */
+    object-fit: cover; /* Ensures it fills the width */
+    object-position: top; /* Keeps the fruit/item in view, hides the bottom */
+    transform: scale(1.1); /* Extra subtle zoom */
+}
+
+/* Hover effect like the real app */
+.category-item-wrapper:hover .zepto-img-box {
+    transform: scale(1.25);
+}
+
+.zepto-cat-name-v2 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+    text-align: center;
+    margin-top: 4px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Ensure the wrapper doesn't shrink */
+.category-item-wrapper {
+    cursor: pointer;
+    flex: 0 0 auto;
+    width: 130px;
+    margin-right: 20px;
+}
+
+
+.promo-swiper {
+    padding-bottom: 20px !important; 
+    max-width: 1280px; /* Constrain the max width of the banner section */
+    margin: 0 auto;
+}
+
+.banner-card img {
+    border-radius: 12px; /* Matches the 'congested' modern look */
+}
+
+.nav-category-link {
+    padding: 4px 12px; /* Tighter padding */
+    font-size: 13px;   /* Slightly smaller text */
+    margin-bottom: 0;
+}
+
+.zepto-navbar-container {
+    padding: 5px 0; /* Reduce overall navbar height */
+}
+
+/* Container adjustments */
+.category-inner-flex {
+    gap: 12px; /* Reduced from 22px */
+    padding: 10px 0;
+}
+
+.category-item-wrapper {
+    width: 85px; /* Reduced from 130px to match real site density */
+    margin-right: 0; /* Use gap in flex instead */
+}
+
+
+
+/* Category Text - making it smaller and tighter */
+
+
+.zepto-nav-wrapper {
+    position: -webkit-sticky; /* Support for Safari */
+    position: sticky;
+    top: 0;           /* Stick it to the very top */
+    z-index: 1000;    /* Keep it above all other content */
+    background-color: #ffffff; /* Must have a background or it will be transparent */
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Adds a shadow so it looks separate from content */
+}
+/* 1. Main Navbar Section - Increase Height and Centricity */
+.zepto-nav-wrapper .navbar {
+    padding: 12px 0 !important; /* Increases overall vertical height */
+    height: auto;
+    min-height: 75px; 
+}
+
+/* 2. Centering the Category Sub-Nav */
+.zepto-nav-wrapper .sub-nav-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center;
+    gap: 8px;                    /* Very tight gap for that 'congested' look */
+    padding: 4px 0;              /* Reduced vertical padding */
+}
+
+/* 2. Individual Link Styling */
+.nav-category-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;                    /* Minimal gap between icon and text */
+    padding: 16px 24px;           /* Breathing room on sides, tight top/bottom */
+    text-decoration: none;
+    color: #666;
+    font-size: 13.5px;           /* Matching the official font scale */
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Larger Icons for categories */
+.nav-category-link svg {
+    font-size: 1.3rem !important; /* Makes symbols clearly bigger */
+}
+
+/* Active State */
+.active-cat {
+    color: #8224e3 !important;
+    border-bottom: 2px solid #8224e3 !important;
+    font-weight: 700;
+}
+
+.nav-category-link svg, 
+.nav-category-link i {
+    font-size: 1.15rem !important; /* Slightly larger symbols */
+    margin-right: 2px;
+}
+
+/* 4. Active State with the Purple Bar */
+.active-cat {
+    color: #8224e3 !important;
+    border-bottom: 2px solid #8224e3 !important;
+    font-weight: 600;
+}
+
+/* Increase height of the main top navbar */
+.zepto-nav-wrapper .navbar {
+    min-height: 80px; 
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+/* Container for the All, Cafe, Home links */
+.sub-nav-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns categories to the left */
+    align-items: center;
+    gap: 12px;                    /* Congested/tight spacing */
+    padding: 0;                   /* Remove extra padding */
+}
+
+.nav-category-link {
+    padding: 10px 15px;           /* Height for the purple bottom border */
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.zepto-carousel-wrapper {
+    width: 100%;
+    padding: 20px 0;
+    /* This ensures it starts at the same left margin as the logo */
+    padding-left: calc(var(--bs-gutter-x, 0.75rem) + 3rem); 
+}
+
+.category-inner-flex {
+    display: flex;
+    justify-content: flex-start; /* Forces items to stay on the left */
+    gap: 18px;                   /* Tight spacing like the original */
+    overflow-x: auto;
+}
+
+/* Matching the official image box style */
+
+
+.zepto-cat-name-v2 {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    max-width: 90px;
+    line-height: 1.2;
+}
+
+/* 1. Main Navbar - Standardize the padding */
+.zepto-nav-wrapper .navbar .container-fluid {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    max-width: 100% !important;
+}
+
+/* 2. Sub-Nav (All, Cafe, Home) - Force Left Alignment */
+.sub-nav-container {
+    display: flex;
+    justify-content: flex-start !important; 
+    align-items: center;
+    gap: 8px;
+    padding-left: 3rem !important; /* Matches Logo exactly */
+    margin: 0 !important;
+}
+
+/* 3. Category Circles Component - Move more left */
+.zepto-carousel-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 20px 0 20px 3rem !important; /* Force the same 3rem start point */
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.category-inner-flex {
+    display: flex;
+    justify-content: flex-start !important; /* Stop centering circles */
+    gap: 12px; /* Tight congestion like the original */
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 0 !important;
+}
+
+.category-inner-flex::-webkit-scrollbar {
+    display: none;
+}
+
+/* 4. Circle Item Sizing */
+.category-item-wrapper {
+    flex: 0 0 auto;
+    width: 85px; /* Compact size to keep it on the left */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.zepto-cat-name-v2 {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: center;
+    max-width: 80px;
+    line-height: 1.2;
+}
+
+/* 5. Adjust Search Bar Width */
+.zepto-nav-wrapper .form-control {
+    width: 600px !important; /* Makes it wider to bridge the gap */
+    background-color: #f3f4f6;
+    border: none;
+    border-radius: 10px;
+}
+
+/* adress  */
+.address-card {
+  transition: all 0.2s ease-in-out;
+  border-left: 4px solid transparent !important;
+}
+
+.address-card:hover {
+  border-left: 4px solid #8224e3 !important;
+  background-color: #fcfaff;
+}
+
+.nav-item-zepto {
+  padding: 12px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-item-zepto.active {
+  background-color: #f0e6ff;
+  color: #8224e3;
+  font-weight: 700;
+}
+
+
+/* Reset and Base Spacing */
+.zepto-nav-wrapper {
+    font-family: 'Inter', sans-serif; /* Zepto uses a clean sans-serif */
+}
+
+.zepto-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 60px; /* Equal spacing on both ends */
+    margin: 0 auto;
+}
+
+/* Top Navbar - Slightly taller as requested */
+.zepto-main-nav {
+    height: 80px; /* Bigger upper part */
+    background: #fff;
+    border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 0 0 auto;
+}
+
+.zepto-logo-img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.location-box {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Center Search - Disciplined Width */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 800px;
+    background: #f3f4f6;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.search-icon {
+    color: #888;
+    margin-right: 12px;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Right Actions */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 35px; /* Spaced out actions */
+    flex: 0 0 auto;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: #1a1a1a;
+}
+
+.action-btn span {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.cart-icon-wrapper {
+    position: relative;
+}
+
+.cart-count-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #ff527b;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+/* Category Strip */
+.zepto-cat-nav {
+    background: #fff;
+    border-bottom: 1px solid #f1f1f1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.cat-list {
+    display: flex;
+    gap: 40px; /* Spacious categories */
+    align-items: center;
+}
+
+.cat-item {
+    text-decoration: none;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 0;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+.cat-item:hover, .cat-item.active {
+    color: #8224e3;
+    border-bottom: 3px solid #8224e3;
+}
+
+.cat-icon {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+/* components */
+/* THE DISCIPLINED LAYOUT CLASS */
+.zepto-layout-row {
+    width: 100%;
+    /* 60px padding creates the 'disciplined' gap on both sides */
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Apply this to your Navbar container */
+/* THE DISCIPLINED LAYOUT CLASS */
+.zepto-layout-row {
+    width: 100%;
+    /* 60px padding creates the 'disciplined' gap on both sides */
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Apply this to your Navbar container */
+.zepto-container {
+   
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Apply this to your Product Sections and Banners */
+.banner-grid, .product-section-wrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.zepto-page-width {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+    max-width: 100%;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Container setup */
+.category-scroll-container {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.category-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.category-inner-flex {
+  display: flex;
+  gap: 18px; /* Spacing between items */
+}
+
+/* Item Wrapper */
+.category-item-wrapper {
+  flex: 0 0 auto;
+  width: 100px; /* Increased size */
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.category-item-wrapper:hover {
+  transform: translateY(-3px);
+}
+
+
+/* Category Label */
+.zepto-cat-name-v2 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.2;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 32px; /* Fixed height for alignment */
+}
+
+/* Navigation Arrows */
+.scroll-arrow-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.scroll-arrow-btn.prev { left: -16px; }
+.scroll-arrow-btn.next { right: -16px; }
+
+.scroll-arrow-btn:hover {
+  background-color: #f8f8f8;
+}
