@@ -1,2 +1,2 @@
-# zepto
-zepto-clone
+# Online.Kirana
+online-kirana-app
