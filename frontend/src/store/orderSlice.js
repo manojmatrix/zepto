@@ -8,7 +8,7 @@ export const verifyOrder = createAsyncThunk('order/verify', async (paymentData, 
     const config = { headers: { Authorization: `Bearer ${token}` } };
     
     // Hit a NEW verification route
-    const response = await axios.post('http://localhost:8000/api/order/verify-payment', paymentData, config);
+    const response = await axios.post('https://online-kirana-shop.onrender.com/api/order/verify-payment', paymentData, config);
     
     return response.data;
   } catch (error) {

@@ -15,7 +15,7 @@ const OrderHistory = () => {
     const fetchOrders = async () => {
         try {
             const token = localStorage.getItem('token');
-            const { data } = await axios.get('http://localhost:8000/api/order/my-orders', {
+            const { data } = await axios.get('https://online-kirana-shop.onrender.com/api/order/my-orders', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setOrders(data);
@@ -33,7 +33,7 @@ const OrderHistory = () => {
         if (!window.confirm("Are you sure you want to cancel?")) return;
         try {
             const token = localStorage.getItem('token');
-            await axios.put(`http://localhost:8000/api/order/${orderId}/cancel`, {}, {
+            await axios.put(`https://online-kirana-shop.onrender.com/api/order/${orderId}/cancel`, {}, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchOrders(); // Refresh list after cancellation
@@ -53,7 +53,7 @@ const OrderHistory = () => {
             // Using productId._id to ensure we get the string ID if populated
             const pId = selectedProduct.productId._id || selectedProduct.productId;
             
-            await axios.post(`http://localhost:8000/api/product/${pId}/review`, reviewData, {
+            await axios.post(`https://online-kirana-shop.onrender.com/api/product/${pId}/review`, reviewData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             alert("Review submitted successfully!");

@@ -16,7 +16,7 @@ const SellerAddProduct = () => {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            const res = await axios.post('http://localhost:8000/api/product/add', formData, {
+            const res = await axios.post('https://online-kirana-shop.onrender.com/api/product/add', formData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             if (res.data.success) {

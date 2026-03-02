@@ -24,10 +24,10 @@ const Login = ({ show, handleClose }) => {
     const handleAuthAction = async () => {
         try {
             if (step === 1) {
-                const res = await axios.post('http://localhost:8000/api/auth/send-otp', { contact: email});
+                const res = await axios.post('https://online-kirana-shop.onrender.com/api/auth/send-otp', { contact: email});
                 if (res.data.success) setStep(2);
             } else if (step === 2) {
-                const res = await axios.post('http://localhost:8000/api/auth/verify-otp', {contact: email, otp });
+                const res = await axios.post('https://online-kirana-shop.onrender.com/api/auth/verify-otp', {contact: email, otp });
                 if (res.data.success) {
                     if (res.data.isNewUser) { setStep(3); } 
                     else {
@@ -43,7 +43,7 @@ const Login = ({ show, handleClose }) => {
 
     const handleSaveName = async () => {
         try {
-            const res = await axios.post('http://localhost:8000/api/auth/save-name', {email, name });
+            const res = await axios.post('https://online-kirana-shop.onrender.com/api/auth/save-name', {email, name });
             if (res.data.success) {
                 localStorage.setItem('token', res.data.token);
                 localStorage.setItem('user', JSON.stringify(res.data.user));

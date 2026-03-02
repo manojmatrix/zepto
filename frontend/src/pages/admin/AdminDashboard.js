@@ -20,7 +20,7 @@ const AdminDashboard = () => {
         try {
             const token = localStorage.getItem('token');
             const config = { headers: { Authorization: `Bearer ${token}` } };
-            const ordersRes = await axios.get('http://localhost:8000/api/order/all-orders', config);
+            const ordersRes = await axios.get('https://online-kirana-shop.onrender.com/api/order/all-orders', config);
             setOrders(ordersRes.data);
         } catch (err) { 
             console.error("Error fetching data", err); 
@@ -56,7 +56,7 @@ const AdminDashboard = () => {
 
         // 1. Make the API call
         const response = await axios.put(
-            `http://localhost:8000/api/order/${orderId}/item/${productId}`, 
+            `https://online-kirana-shop.onrender.com/api/order/${orderId}/item/${productId}`, 
             { status: newStatus }, 
             config
         );
@@ -86,7 +86,7 @@ const AdminDashboard = () => {
         const config = { headers: { Authorization: `Bearer ${token}` } };
         
         // This hits your existing endpoint that updates the entire order object
-        await axios.put(`http://localhost:8000/api/order/${orderId}/status`, { status: newStatus }, config);
+        await axios.put(`https://online-kirana-shop.onrender.com/api/order/${orderId}/status`, { status: newStatus }, config);
         
         alert(`Order ${orderId.slice(-6)} is now ${newStatus}`);
         fetchOrders(); // Refresh the list
@@ -101,7 +101,7 @@ const AdminDashboard = () => {
     const RenderOverview = () => {
         const [userCount, setUserCount] = useState(0); 
         useEffect(() => { 
-            axios.get("http://localhost:8000/api/auth/users/count").then(res => setUserCount(res.data.totalUsers)); 
+            axios.get("https://online-kirana-shop.onrender.com/api/auth/users/count").then(res => setUserCount(res.data.totalUsers)); 
         }, []);
         
         return (

@@ -29,10 +29,10 @@ const SellerDashboard = () => {
             const config = { headers: { Authorization: `Bearer ${token}` } };
 
             if (activeTab === 'inventory') {
-                const res = await axios.get('http://localhost:8000/api/product/seller-products', config);
+                const res = await axios.get('https://online-kirana-shop.onrender.com/api/product/seller-products', config);
                 setMyProducts(res.data.products || res.data);
             } else {
-                const res = await axios.get('http://localhost:8000/api/order/seller-orders', config);
+                const res = await axios.get('https://online-kirana-shop.onrender.com/api/order/seller-orders', config);
                 console.log("Seller Orders Received:", res.data);
                 setOrders(Array.isArray(res.data) ? res.data : []);
             }
@@ -48,7 +48,7 @@ const SellerDashboard = () => {
 
     const updateStatus = async (orderId, newStatus) => {
         try {
-            await axios.put(`http://localhost:8000/api/order/${orderId}/status`, { status: newStatus }, config);
+            await axios.put(`https://online-kirana-shop.onrender.com/api/order/${orderId}/status`, { status: newStatus }, config);
             fetchData(); 
             alert(`Order marked as ${newStatus}`);
         } catch (err) { alert("Update failed"); }
@@ -60,7 +60,7 @@ const SellerDashboard = () => {
         const config = { headers: { Authorization: `Bearer ${token}` } };
         
         // Ensure your backend has a route to handle partial product updates
-        await axios.put(`http://localhost:8000/api/product/${productId}`, { 
+        await axios.put(`https://online-kirana-shop.onrender.com/api/product/${productId}`, { 
             countInStock: tempStock 
         }, config);
 

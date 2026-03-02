@@ -15,7 +15,7 @@ const AddressesButton = ({ userId }) => {
                 const token = localStorage.getItem('token'); // Assumes token-based 'protect' middleware
                 
                 // Hits your router.get('/addresses/:userId', protect, getUserProfile)
-                const response = await axios.get(`http://localhost:8000/api/auth/addresses/${userId}`, {
+                const response = await axios.get(`https://online-kirana-shop.onrender.com/api/auth/addresses/${userId}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
 

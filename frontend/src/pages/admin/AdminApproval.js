@@ -8,7 +8,7 @@ const AdminApproval = () => {
 
     const fetchPending = async () => {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:8000/api/product/admin/pending', {
+        const res = await axios.get('https://online-kirana-shop.onrender.com/api/product/admin/pending', {
             headers: { Authorization: `Bearer ${token}` }
         });
         setPendingProducts(res.data.products);
@@ -19,7 +19,7 @@ const AdminApproval = () => {
     const handleAction = async (productId, status) => {
         try {
             const token = localStorage.getItem('token');
-            await axios.patch('http://localhost:8000/api/product/admin/update-status', 
+            await axios.patch('https://online-kirana-shop.onrender.com/api/product/admin/update-status', 
                 { productId, status },
                 { headers: { Authorization: `Bearer ${token}` }}
             );

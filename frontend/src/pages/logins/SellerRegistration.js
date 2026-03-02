@@ -25,7 +25,7 @@ const SellerRegister = () => {
     const handleSendOtp = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8000/api/auth/send-otp', { 
+            const response = await axios.post('https://online-kirana-shop.onrender.com/api/auth/send-otp', { 
                 phone: formData.phone 
             });
 
@@ -41,7 +41,7 @@ const SellerRegister = () => {
     // Step 2: Verify OTP and Save Seller Data
     const handleVerifyAndRegister = async () => {
         try {
-            const response = await axios.post('http://localhost:8000/api/auth/verify-otp', {
+            const response = await axios.post('https://online-kirana-shop.onrender.com/api/auth/verify-otp', {
                 phone: formData.phone,
                 otp: otp,
                 sellerData: formData // This triggers the Seller Logic we added to your backend

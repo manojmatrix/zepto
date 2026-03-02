@@ -7,7 +7,7 @@ export const getCart = createAsyncThunk('cart/getCart', async (userId, thunkAPI)
     try {
         const token = localStorage.getItem('token');
         const config = { headers: { Authorization: `Bearer ${token}` } };
-        const response = await axios.get(`http://localhost:8000/api/cart/${userId}`, config);
+        const response = await axios.get(`https://online-kirana-shop.onrender.com/api/cart/${userId}`, config);
         return response.data; // Should return { items, billTotal }
     } catch (error) {
         return thunkAPI.rejectWithValue(error.response.data);
@@ -22,7 +22,7 @@ export const addToCart = createAsyncThunk('cart/addItemToCart', async (cartData,
         const config = { headers: { Authorization: `Bearer ${token}` } };
         console.log("Sending to cart:", { cartData});
         // cartData includes: userId, productId, name, price, image, quantity
-        const response = await axios.post(`http://localhost:8000/api/cart/add`, cartData, config)
+        const response = await axios.post(`https://online-kirana-shop.onrender.com/api/cart/add`, cartData, config)
         return response.data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.response.data);
@@ -34,7 +34,7 @@ export const removeFromCart = createAsyncThunk('cart/removeItemToCart', async ({
         const token = localStorage.getItem('token');
         const config = { headers: { Authorization: `Bearer ${token}` } };
         // cartData includes: userId, productId, name, price, image, quantity
-        const response = await axios.delete(`http://localhost:8000/api/cart/remove/${userId}/${productId}`, config);
+        const response = await axios.delete(`https://online-kirana-shop.onrender.com/api/cart/remove/${userId}/${productId}`, config);
         return response.data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.response.data);
@@ -44,7 +44,7 @@ export const removeFromCart = createAsyncThunk('cart/removeItemToCart', async ({
 export const updateCartItem = createAsyncThunk('cart/updateItem', async ({ userId, productId, quantity }, thunkAPI) => {
     try {
         const token = localStorage.getItem('token'); const config = { headers: { Authorization: `Bearer ${token}` } };
-        const response = await axios.put(`http://localhost:8000/api/cart/update`,
+        const response = await axios.put(`https://online-kirana-shop.onrender.com/api/cart/update`,
             { userId, productId, quantity }, config);
         return response.data;
     }

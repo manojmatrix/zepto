@@ -12,7 +12,7 @@ const ProductSection = ({ title, category, noContainer }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/product/approved');
+        const response = await axios.get('https://online-kirana-shop.onrender.com/api/product/approved');
         const allProducts = response.data.products || [];
 
         if (category && category !== "All") {

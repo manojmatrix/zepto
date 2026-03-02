@@ -62,7 +62,7 @@ const fetchAddresses = async () => {
 
     try {
         const response = await axios.get(
-            `http://localhost:8000/api/auth/addresses/${storedUser._id}`, 
+            `https://online-kirana-shop.onrender.com/api/auth/addresses/${storedUser._id}`, 
             { headers: { Authorization: `Bearer ${token}` } }
         );
 
@@ -115,7 +115,7 @@ useEffect(() => {
     setIsProcessing(true);
 
     const response = await axios.post(
-      'http://localhost:8000/api/auth/add-address', 
+      'https://online-kirana-shop.onrender.com/api/auth/add-address', 
       { userId: user._id, addressData: addressData },
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -227,7 +227,7 @@ useEffect(() => {
 
     // Create the order in your DB
     const { data: order } = await axios.post(
-      'http://localhost:8000/api/order/create-razorpay-order', 
+      'https://online-kirana-shop.onrender.com/api/order/create-razorpay-order', 
       orderPayload, 
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -289,7 +289,7 @@ const handleDeleteAddress = async (addresses) => {
     // Note: We removed the { userId, addressData } object. 
     // Axios DELETE expects: url, config (headers)
     const response = await axios.delete(
-      `http://localhost:8000/api/auth/${addresses}`,
+      `https://online-kirana-shop.onrender.com/api/auth/${addresses}`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
 

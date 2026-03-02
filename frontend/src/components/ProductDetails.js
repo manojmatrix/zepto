@@ -29,11 +29,11 @@ const ProductDetails = () => {
     const fetchDetails = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:8000/api/product/${id}`);
+        const response = await axios.get(`https://online-kirana-shop.onrender.com/api/product/${id}`);
         const currentProduct = response.data.product;
         setProduct(currentProduct);
 
-        const allRes = await axios.get(`http://localhost:8000/api/product/approved`);
+        const allRes = await axios.get(`https://online-kirana-shop.onrender.com/api/product/approved`);
         const filtered = allRes.data.products.filter(
           p => p.category === currentProduct.category && p._id !== id
         );
